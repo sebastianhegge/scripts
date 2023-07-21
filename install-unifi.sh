@@ -34,7 +34,7 @@ echo "deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti" | sudo tee
 
 apt update
 
-export SSL_PACKAGE_NAME=libssl1.1_1.1.1-1ubuntu2.1~18.04.21_amd64.deb
+export SSL_PACKAGE_NAME=libssl1.1_1.1.1-1ubuntu2.1~18.04.23_amd64.deb
 wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/$SSL_PACKAGE_NAME
 apt install ./$SSL_PACKAGE_NAME
 rm $SSL_PACKAGE_NAME
