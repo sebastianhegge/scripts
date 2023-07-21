@@ -7,20 +7,8 @@ It may be adjustable for other Ubuntu / Debian distributions.\
 The script does the following:
 * `apt update`
 * `apt dist-update` (optional)
-* `apt install \` (optional)
- * `apt curl \`
- * `apt htop \`
- * `apt pwgen \`
- * `apt zip \`
- * `apt unzip \`
- * `apt whois \`
- * `apt ack-grep \`
- * `apt net-tools \`
- * `apt dnsutils`
-* `apt install \`
- * `apt gnupg \`
- * `apt ca-certificates \`
- * `apt apt-transport-https`
+* `apt install curl htop pwgen zip unzip whois ack-grep net-tools dnsutils` (optional)
+* `apt install gnupg ca-certificates apt-transport-https`
 * adds the gpg keys from MongoDB and UniFi
 * installs old OpenSSL 1.1.1 from Ubuntu 18.04 LTS (needed by MongoDB)
 * `apt install mongodb-org`
