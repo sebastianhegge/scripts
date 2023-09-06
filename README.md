@@ -14,7 +14,7 @@ The script does the following:
 * `apt install mongodb-org`
 * `apt install unifi`
 
-## `update-minecraft-server.sh`
+## `update-minecraft-server.rb`
 
 This script is written in ruby. It looks for the latest Minecraft Server, stops running server, download new one, and start service with new version again.\
 The script does the following:
