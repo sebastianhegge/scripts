@@ -1,4 +1,4 @@
-# scripts - a small, growing, script collection
+# scripts - a small, growing script collection
 
 ## `install-unifi.sh`
 
@@ -10,7 +10,7 @@ The script does the following:
 * `apt install curl htop pwgen zip unzip whois ack-grep net-tools dnsutils` (optional)
 * `apt install gnupg ca-certificates apt-transport-https`
 * adds the gpg keys from MongoDB and UniFi
-* installs old OpenSSL 1.1.1 from Ubuntu 18.04 LTS (needed by MongoDB)
+* installs old OpenSSL 1.1.1f from Ubuntu 20.04 LTS (needed by MongoDB)
 * `apt install mongodb-org`
 * `apt install unifi`
 
