@@ -25,7 +25,11 @@ case $yn in
 esac
 
 echo "gnupg, ca-certificates and apt-transport-https are installed..."
-apt install -y gnupg ca-certificates apt-transport-https
+for package in gnupg ca-certificates apt-transport-https; do
+  if ! dpkg -l "$package" | grep -q ^ii; then
+    apt install -y "$package"
+  fi
+done
 
 echo "MongoDB 3.6 repo key is downloaded and added..."
 wget -qO - https://www.mongodb.org/static/pgp/server-3.6.asc | gpg --dearmor -o /etc/apt/trusted.gpg.d/mongo-3-6.gpg
@@ -39,7 +43,7 @@ echo "apt update is done (again)...";
 apt update
 
 echo "legacy openssl package is downloaded...";
-export SSL_PACKAGE_NAME=libssl1.1_1.1.1f-1ubuntu2.19_amd64.deb
+export SSL_PACKAGE_NAME=libssl1.1_1.1.1f-1ubuntu2.20_amd64.deb
 wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/$SSL_PACKAGE_NAME
 echo "legacy openssl package is installed...";
 apt install ./$SSL_PACKAGE_NAME
