@@ -8,11 +8,26 @@ The script does the following:
 * `apt update`
 * `apt dist-update` (optional)
 * `apt install curl htop pwgen zip unzip whois ack-grep net-tools dnsutils` (optional)
-* `apt install gnupg ca-certificates apt-transport-https`
+* `apt install gnupg ca-certificates apt-transport-https` (if not installed)
 * adds the gpg keys from MongoDB and UniFi
+* adds repo source files to `/etc/apt/sources.list`
 * installs old OpenSSL 1.1.1f from Ubuntu 20.04 LTS (needed by MongoDB)
 * `apt install mongodb-org`
 * `apt install unifi`
+
+## `install-nodejs.sh`
+
+This script installs the NodeJS.\
+It may be adjustable for other Ubuntu / Debian distributions.\
+The script does the following:
+* `apt update`
+* `apt dist-update` (optional)
+* `apt install curl htop pwgen zip unzip whois ack-grep net-tools dnsutils` (optional)
+* `apt install gnupg ca-certificates` (if not installed)
+* adds the gpg keys from NodeJS
+* adds repo source file to `/etc/apt/sources.list`
+* `apt install nodejs`
+* `corepack enable`
 
 ## `update-minecraft-server.rb`
 
