@@ -31,9 +31,9 @@ for package in gnupg ca-certificates apt-transport-https; do
   fi
 done
 
-echo "MongoDB 3.6 repo key is downloaded and added..."
-wget -qO - https://www.mongodb.org/static/pgp/server-3.6.asc | gpg --dearmor -o /etc/apt/trusted.gpg.d/mongo-3-6.gpg
-echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+echo "MongoDB 4.4 repo key is downloaded and added..."
+wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | gpg --dearmor -o /etc/apt/trusted.gpg.d/mongo-4-4.gpg
+echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
 
 echo "Unifi repo key is downloaded and added..."
 wget -O /etc/apt/trusted.gpg.d/unifi-repo.gpg https://dl.ui.com/unifi/unifi-repo.gpg
@@ -50,7 +50,7 @@ apt install ./$SSL_PACKAGE_NAME
 echo "legacy openssl download is removed...";
 rm $SSL_PACKAGE_NAME
 
-echo "MongoDB 3.6 is installed...";
+echo "MongoDB 4.4 is installed...";
 apt install -y mongodb-org
 
 echo "Unifi is installed...";
