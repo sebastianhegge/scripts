@@ -13,6 +13,13 @@ The script does the following:
 * adds repo source files to `/etc/apt/sources.list`
 * `apt install mongodb-org`
 
+Script is download- and executeable via:
+```
+wget r.heg.ge/install-mongodb7.sh
+chmod +x install-mongodb7.sh
+./install-mongodb7.sh
+```
+
 ## `install-nodejs.sh`
 
 This script installs NodeJS in selecable version on Ubuntu 22.04 LTS.\
@@ -28,6 +35,13 @@ The script does the following:
 * `apt install nodejs`
 * `corepack enable`
 
+Script is download- and executeable via:
+```
+wget r.heg.ge/install-nodejs.sh
+chmod +x install-nodejs.sh
+./install-nodejs.sh
+```
+
 ## `install-phusionpassenger.sh`
 
 This script installs the Phusion Passenger on Ubuntu 22.04 LTS.\
@@ -41,6 +55,13 @@ The script does the following:
 * adds repo source file to `/etc/apt/sources.list`
 * `apt install libapache2-mod-passenger` or `apt install libnginx-mod-http-passenger`
 * optional Webserver restart after installation
+
+Script is download- and executeable via:
+```
+wget r.heg.ge/install-phusionpassenger.sh
+chmod +x install-phusionpassenger.sh
+./install-phusionpassenger.sh
+```
 
 ## `install-unifi.sh`
 
@@ -56,6 +77,13 @@ The script does the following:
 * installs old OpenSSL 1.1.1f from Ubuntu 20.04 LTS (needed by old MongoDB)
 * `apt install mongodb-org`
 * `apt install unifi`
+
+Script is download- and executeable via:
+```
+wget r.heg.ge/install-unifi.sh
+chmod +x install-unifi.sh
+./install-unifi.sh
+```
 
 ## `update-minecraft-server.rb`
 
