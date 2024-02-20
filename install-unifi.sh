@@ -50,8 +50,5 @@ apt install ./$SSL_PACKAGE_NAME
 echo "legacy openssl download is removed...";
 rm $SSL_PACKAGE_NAME
 
-echo "MongoDB 4.4 is installed...";
-apt install -y mongodb-org
-
 echo "Unifi is installed...";
 apt install -y unifi
