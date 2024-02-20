@@ -43,7 +43,7 @@ echo "apt update is done (again)...";
 apt update
 
 echo "legacy openssl package is downloaded...";
-export SSL_PACKAGE_NAME=libssl1.1_1.1.1f-1ubuntu2.20_amd64.deb
+export SSL_PACKAGE_NAME=libssl1.1_1.1.1f-1ubuntu2.21_amd64.deb
 wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/$SSL_PACKAGE_NAME
 echo "legacy openssl package is installed...";
 apt install ./$SSL_PACKAGE_NAME
