@@ -74,7 +74,6 @@ The script does the following:
 * `apt install gnupg ca-certificates apt-transport-https` (if not installed)
 * adds the gpg keys from MongoDB and UniFi
 * adds repo source files to `/etc/apt/sources.list`
-* installs old OpenSSL 1.1.1f from Ubuntu 20.04 LTS (needed by old MongoDB)
 * `apt install mongodb-org`
 * `apt install unifi`
 
