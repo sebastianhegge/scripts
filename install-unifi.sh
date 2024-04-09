@@ -31,9 +31,9 @@ for package in gnupg ca-certificates apt-transport-https; do
   fi
 done
 
-echo "MongoDB 4.4 repo key is downloaded and added..."
-wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | gpg --dearmor -o /etc/apt/trusted.gpg.d/mongo-4-4.gpg
-echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+echo "MongoDB 7.0 repo key is downloaded and added..."
+wget -qO - https://pgp.mongodb.com/server-7.0.asc | gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-org-7.0.gpg
+echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 
 echo "Unifi repo key is downloaded and added..."
 wget -O /etc/apt/trusted.gpg.d/unifi-repo.gpg https://dl.ui.com/unifi/unifi-repo.gpg
@@ -42,13 +42,8 @@ echo "deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti" | sudo tee
 echo "apt update is done (again)...";
 apt update
 
-echo "legacy openssl package is downloaded...";
-export SSL_PACKAGE_NAME=libssl1.1_1.1.1f-1ubuntu2.21_amd64.deb
-wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/$SSL_PACKAGE_NAME
-echo "legacy openssl package is installed...";
-apt install ./$SSL_PACKAGE_NAME
-echo "legacy openssl download is removed...";
-rm $SSL_PACKAGE_NAME
+echo "MongoDB 7.0 is installed...";
+apt install -y mongodb-org
 
 echo "Unifi is installed...";
 apt install -y unifi
