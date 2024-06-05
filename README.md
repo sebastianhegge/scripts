@@ -7,10 +7,10 @@ It may be adjustable for other Ubuntu / Debian distributions.\
 The script does the following:
 * `apt update`
 * `apt dist-update` (optional)
-* `apt install curl htop pwgen zip unzip whois ack-grep net-tools dnsutils` (optional)
+* `apt install curl htop pwgen zip unzip whois net-tools dnsutils` (optional)
 * `apt install gnupg ca-certificates apt-transport-https` (if not installed)
 * adds the gpg key from MongoDB
-* adds repo source files to `/etc/apt/sources.list`
+* adds repo source files to `/etc/apt/sources.list.d`
 * `apt install mongodb-org`
 
 Script is download- and executeable via:
@@ -20,18 +20,38 @@ chmod +x install-mongodb7.sh
 ./install-mongodb7.sh
 ```
 
+## `install-nginx.sh`
+
+This script installs NGINX on Ubuntu 22.04 LTS.\
+It may be adjustable for other Ubuntu / Debian distributions.\
+The script does the following:
+* `apt update`
+* `apt dist-update` (optional)
+* `apt install curl htop pwgen zip unzip whois net-tools dnsutils` (optional)
+* `apt install gnupg ca-certificates apt-transport-https` (if not installed)
+* adds the gpg key from NGINX
+* adds repo source files to `/etc/apt/sources.list.d`
+* `apt install nginx`
+
+Script is download- and executeable via:
+```
+wget r.heg.ge/install-nginx.sh
+chmod +x install-nginx.sh
+./install-nginx.sh
+```
+
 ## `install-nodejs.sh`
 
 This script installs NodeJS in selecable version on Ubuntu 22.04 LTS.\
 It may be adjustable for other Ubuntu / Debian distributions.\
 The script does the following:
-* let you select between NodeJS version 18 LTS, 20 LTS or 21
+* let you select between NodeJS version 18 LTS, 20 LTS, 22 (later LTS) or 21
 * `apt update`
 * `apt dist-update` (optional)
-* `apt install curl htop pwgen zip unzip whois ack-grep net-tools dnsutils` (optional)
+* `apt install curl htop pwgen zip unzip whois net-tools dnsutils` (optional)
 * `apt install gnupg ca-certificates apt-transport-https` (if not installed)
 * adds the gpg key from NodeJS
-* adds repo source files to `/etc/apt/sources.list`
+* adds repo source files to `/etc/apt/sources.list.d`
 * `apt install nodejs`
 * `corepack enable`
 
@@ -49,10 +69,10 @@ It may be adjustable for other Ubuntu / Debian distributions.\
 The script does the following:
 * `apt update`
 * `apt dist-update` (optional)
-* `apt install curl htop pwgen zip unzip whois ack-grep net-tools dnsutils` (optional)
+* `apt install curl htop pwgen zip unzip whois net-tools dnsutils` (optional)
 * `apt install gnupg ca-certificates apt-transport-https` (if not installed)
 * adds the gpg key from Phusion
-* adds repo source file to `/etc/apt/sources.list`
+* adds repo source file to `/etc/apt/sources.list.d`
 * `apt install libapache2-mod-passenger` or `apt install libnginx-mod-http-passenger`
 * optional Webserver restart after installation
 
@@ -70,10 +90,10 @@ It may be adjustable for other Ubuntu / Debian distributions.\
 The script does the following:
 * `apt update`
 * `apt dist-update` (optional)
-* `apt install curl htop pwgen zip unzip whois ack-grep net-tools dnsutils` (optional)
+* `apt install curl htop pwgen zip unzip whois net-tools dnsutils` (optional)
 * `apt install gnupg ca-certificates apt-transport-https` (if not installed)
 * adds the gpg keys from MongoDB and UniFi
-* adds repo source files to `/etc/apt/sources.list`
+* adds repo source files to `/etc/apt/sources.list.d`
 * `apt install mongodb-org`
 * `apt install unifi`
 
