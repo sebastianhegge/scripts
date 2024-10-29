@@ -50,7 +50,7 @@ echo "installation done!"
 
 echo "Phusion repo key is downloaded and added..."
 wget -qO - "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x561f9b9cac40b2f7" | gpg --dearmor -o /etc/apt/trusted.gpg.d/phusion.gpg
-echo "deb https://oss-binaries.phusionpassenger.com/apt/passenger jammy main" | sudo tee /etc/apt/sources.list.d/passenger.list
+echo "deb https://oss-binaries.phusionpassenger.com/apt/passenger jammy main" | tee /etc/apt/sources.list.d/passenger.list
 echo "download and adding done!";
 
 echo "apt update is done (again)...";

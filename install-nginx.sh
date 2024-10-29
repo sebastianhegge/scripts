@@ -41,7 +41,7 @@ echo "installation done!"
 
 echo "NGINX repo key is downloaded and added..."
 wget -qO - https://nginx.org/keys/nginx_signing.key | gpg --dearmor -o /etc/apt/trusted.gpg.d/nginx.gpg
-echo "deb [ arch=amd64 ] http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" | sudo tee /etc/apt/sources.list.d/nginx.list
+echo "deb [ arch=amd64 ] http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" | tee /etc/apt/sources.list.d/nginx.list
 echo "download and adding done!";
 
 echo "apt update is done (again)...";

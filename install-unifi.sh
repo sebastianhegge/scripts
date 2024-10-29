@@ -41,12 +41,12 @@ echo "installation done!"
 
 echo "MongoDB 7.0 repo key is downloaded and added..."
 wget -qO - https://pgp.mongodb.com/server-7.0.asc | gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-org-7.0.gpg
-echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 echo "download and adding done!";
 
 echo "Unifi repo key is downloaded and added..."
 wget -O /etc/apt/trusted.gpg.d/unifi-repo.gpg https://dl.ui.com/unifi/unifi-repo.gpg
-echo "deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti" | sudo tee /etc/apt/sources.list.d/unifi.list
+echo "deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti" | tee /etc/apt/sources.list.d/unifi.list
 echo "download and adding done!";
 
 echo "apt update is done (again)...";

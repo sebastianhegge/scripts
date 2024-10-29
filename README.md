@@ -83,6 +83,26 @@ chmod +x install-phusionpassenger.sh
 ./install-phusionpassenger.sh
 ```
 
+## `install-redis.sh`
+
+This script installs Redis on Ubuntu 22.04 LTS.\
+It may be adjustable for other Ubuntu / Debian distributions.\
+The script does the following:
+* `apt update`
+* `apt dist-update` (optional)
+* `apt install curl htop pwgen zip unzip whois net-tools dnsutils` (optional)
+* `apt install gnupg ca-certificates apt-transport-https` (if not installed)
+* adds the gpg key from Redis
+* adds repo source file to `/etc/apt/sources.list.d`
+* `apt install redis`
+
+Script is download- and executeable via:
+```
+wget r.heg.ge/install-redis.sh
+chmod +x install-redis.sh
+./install-redis.sh
+```
+
 ## `install-unifi.sh`
 
 This script installs the UniFi Controller from Ubiquiti on Ubuntu 22.04 LTS.\

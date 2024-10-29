@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "This script installs MongoDB 7.0 from it's own repositories"
+echo "This script installs Redis from it's own repositories"
 read -p "Do you want to continue? [Y/n] " yn
 case $yn in
   [yY] ) ;;
@@ -39,15 +39,15 @@ for package in gnupg ca-certificates apt-transport-https; do
 done
 echo "installation done!"
 
-echo "MongoDB 7.0 repo key is downloaded and added..."
-wget -qO - https://pgp.mongodb.com/server-7.0.asc | gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-org-7.0.gpg
-echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+echo "Redis repo key is downloaded and added..."
+wget -qO - https://packages.redis.io/gpg | gpg --dearmor -o /etc/apt/trusted.gpg.d/redis.gpg
+echo "deb [ arch=amd64 ] https://packages.redis.io/deb $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/redis.list
 echo "download and adding done!";
 
 echo "apt update is done (again)...";
 apt update
 echo "apt update done!";
 
-echo "MongoDB 7.0 is installed...";
-apt install -y mongodb-org
+echo "Redis is installed...";
+apt install -y redis
 echo "installation done!";
