@@ -1,12 +1,32 @@
 # scripts - a small, growing script collection
 
+## `install-docker.sh`
+
+This script installs Docker on Ubuntu 22.04 LTS.\
+It may be adjustable for other Ubuntu / Debian distributions.\
+The script does the following:
+* `apt update`
+* `apt dist-upgrade` (optional)
+* `apt install curl htop pwgen zip unzip whois net-tools dnsutils` (optional)
+* `apt install gnupg ca-certificates apt-transport-https` (if not installed)
+* adds the gpg key from Docker
+* adds repo source files to `/etc/apt/sources.list.d`
+* `apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin`
+
+Script is download- and executeable via:
+```
+wget r.heg.ge/install-docker.sh
+chmod +x install-docker.sh
+./install-docker.sh
+```
+
 ## `install-mongodb7.sh`
 
 This script installs MongoDB 7.0 on Ubuntu 22.04 LTS.\
 It may be adjustable for other Ubuntu / Debian distributions.\
 The script does the following:
 * `apt update`
-* `apt dist-update` (optional)
+* `apt dist-upgrade` (optional)
 * `apt install curl htop pwgen zip unzip whois net-tools dnsutils` (optional)
 * `apt install gnupg ca-certificates apt-transport-https` (if not installed)
 * adds the gpg key from MongoDB
@@ -26,7 +46,7 @@ This script installs NGINX on Ubuntu 22.04 LTS.\
 It may be adjustable for other Ubuntu / Debian distributions.\
 The script does the following:
 * `apt update`
-* `apt dist-update` (optional)
+* `apt dist-upgrade` (optional)
 * `apt install curl htop pwgen zip unzip whois net-tools dnsutils` (optional)
 * `apt install gnupg ca-certificates apt-transport-https` (if not installed)
 * adds the gpg key from NGINX
@@ -47,7 +67,7 @@ It may be adjustable for other Ubuntu / Debian distributions.\
 The script does the following:
 * let you select between NodeJS version 18 LTS, 20 LTS, 22 (later LTS) or 21
 * `apt update`
-* `apt dist-update` (optional)
+* `apt dist-upgrade` (optional)
 * `apt install curl htop pwgen zip unzip whois net-tools dnsutils` (optional)
 * `apt install gnupg ca-certificates apt-transport-https` (if not installed)
 * adds the gpg key from NodeJS
@@ -68,7 +88,7 @@ This script installs the Phusion Passenger on Ubuntu 22.04 LTS.\
 It may be adjustable for other Ubuntu / Debian distributions.\
 The script does the following:
 * `apt update`
-* `apt dist-update` (optional)
+* `apt dist-upgrade` (optional)
 * `apt install curl htop pwgen zip unzip whois net-tools dnsutils` (optional)
 * `apt install gnupg ca-certificates apt-transport-https` (if not installed)
 * adds the gpg key from Phusion
@@ -89,7 +109,7 @@ This script installs Redis on Ubuntu 22.04 LTS.\
 It may be adjustable for other Ubuntu / Debian distributions.\
 The script does the following:
 * `apt update`
-* `apt dist-update` (optional)
+* `apt dist-upgrade` (optional)
 * `apt install curl htop pwgen zip unzip whois net-tools dnsutils` (optional)
 * `apt install gnupg ca-certificates apt-transport-https` (if not installed)
 * adds the gpg key from Redis
@@ -109,7 +129,7 @@ This script installs the UniFi Controller from Ubiquiti on Ubuntu 22.04 LTS.\
 It may be adjustable for other Ubuntu / Debian distributions.\
 The script does the following:
 * `apt update`
-* `apt dist-update` (optional)
+* `apt dist-upgrade` (optional)
 * `apt install curl htop pwgen zip unzip whois net-tools dnsutils` (optional)
 * `apt install gnupg ca-certificates apt-transport-https` (if not installed)
 * adds the gpg keys from MongoDB and UniFi
