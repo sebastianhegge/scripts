@@ -159,4 +159,7 @@ The script does the following:
  * start minecraft service
 
 ## License
-[MIT](LICENSE)
+[MIT](LICENSE.md)
+
+## Buy me a coffee
+<a href="https://www.buymeacoffee.com/hegge" target="_blank"><img src="https://raw.githubusercontent.com/sebastianhegge/scripts/refs/heads/main/.github/buymeacoffee.png" alt="Buy me a coffee" style="width:200px;" ></a>
