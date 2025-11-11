@@ -20,9 +20,9 @@ chmod +x install-docker.sh
 ./install-docker.sh
 ```
 
-## `install-mongodb7.sh`
+## `install-mongodb.sh`
 
-This script installs MongoDB 7.0 on Ubuntu 22.04 LTS.\
+This script installs MongoDB 8.0 on Ubuntu 24.04 LTS.\
 It may be adjustable for other Ubuntu / Debian distributions.\
 The script does the following:
 * `apt update`
@@ -35,9 +35,9 @@ The script does the following:
 
 Script is download- and executeable via:
 ```
-wget r.heg.ge/install-mongodb7.sh
-chmod +x install-mongodb7.sh
-./install-mongodb7.sh
+wget r.heg.ge/install-mongodb.sh
+chmod +x install-mongodb.sh
+./install-mongodb.sh
 ```
 
 ## `install-nginx.sh`
