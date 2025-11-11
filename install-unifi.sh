@@ -39,9 +39,9 @@ for package in gnupg ca-certificates apt-transport-https; do
 done
 echo "installation done!"
 
-echo "MongoDB 7.0 repo key is downloaded and added..."
-wget -qO - https://pgp.mongodb.com/server-7.0.asc | gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-org-7.0.gpg
-echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+echo "MongoDB 8.0 repo key is downloaded and added..."
+wget -qO - https://pgp.mongodb.com/server-8.0.asc | gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-org-8.0.gpg
+echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-8.0.list
 echo "download and adding done!";
 
 echo "Unifi repo key is downloaded and added..."
@@ -53,7 +53,7 @@ echo "apt update is done (again)...";
 apt update
 echo "apt update done!";
 
-echo "MongoDB 7.0 is installed...";
+echo "MongoDB 8.0 is installed...";
 apt install -y mongodb-org
 echo "installation done!";
 
